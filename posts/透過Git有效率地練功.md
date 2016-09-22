@@ -211,7 +211,7 @@ git push github master
 
 ref
 - [設定 Repo URL](https://zlargon.gitbooks.io/git-tutorial/content/remote/remote.html)
-- 上傳分支](https://zlargon.gitbooks.io/git-tutorial/content/remote/push.html)
+- [上傳分支](https://zlargon.gitbooks.io/git-tutorial/content/remote/push.html)
 
 ## 推薦閱讀
 
