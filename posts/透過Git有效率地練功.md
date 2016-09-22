@@ -226,4 +226,3 @@ ref
 - [\[實戰心得\] Git 與 Github 版本控制](http://sdlong.logdown.com/posts/171365)
 - [\[心得分享\] 程式技術最有效的學習方法：認真仔細的整理 git commit](http://sdlong.logdown.com/posts/736307)
 - [\[心得分享\] 用 git rebase 來整理 commit 的技巧與概念](http://sdlong.logdown.com/posts/736902-sharing-organize-commit-in-git-rebase-to-techniques-and-concepts)
->>>>>>> ready
