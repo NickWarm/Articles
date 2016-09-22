@@ -140,7 +140,7 @@ git branch -d (branchname)
 ### 臨摹他人的GitHub projects
 我們可以從他人的專案去學習，首先到他人專案的GitHub，點選 `Clone or download`
 
-![1](./images/1.png)
+![1](../images/1.png)
 
 接著把這段網址複製下來，先用iTerm進入到你想要下載的路徑，然後下指令
 ```
@@ -191,7 +191,7 @@ The authenticity of host 'github.com (207.97.227.239)' can't be established.
 # Are you sure you want to continue connecting (yes/no)? yes
 ```
 
-![2](./images/2.png)
+![2](../images/2.png)
 
 ref
 - [新增專案](https://zlargon.gitbooks.io/git-tutorial/content/remote/new_project.html)
