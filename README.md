@@ -14,3 +14,7 @@
 要發表時使用`git checkout -b ready`生成新的`ready` branch，刪除不想發表的內容後切換到`master`並使用`git merge ready`
 
 完成後再用`git branch -d ready`來刪除`ready` branch
+
+注意，不要刪除資料夾，經測試用`rm -rf`刪除的資料夾，在所有branch都會被刪除。
+
+resumes相關的另外開一個新專案。
