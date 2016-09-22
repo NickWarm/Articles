@@ -1,6 +1,11 @@
 # 透過Git有效率地練功
 
+你會在這篇得到
+- 一個**完整的情境**，關於你如何使用Git
+- 有效率地透過Git反覆練習你所臨摹的帖子，直到你把它燒到長久記憶裡去。
+
 遇到Git相關的問題，推薦查閱[Git | GitBook](https://zlargon.gitbooks.io/git-tutorial/content/index.html)這本電子書。個人建議遇到問題時再去查書，不要從第一頁看到最後一頁，這樣你學不會，看完也忘光光。
+
 
 ## 臨摹寫code
 
@@ -15,7 +20,7 @@ git init
 
 >如果要自己架Git Server跟別人協同開發，[JC大建議](http://tienshunlo-blog.logdown.com/posts/711614-novice-instruction-day2-hd)初始化寫  ( 新手不需要用這方法 )，詳情請見[Git - 架設伺服器](https://git-scm.com/book/zh-tw/v1/%E4%BC%BA%E6%9C%8D%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E6%9E%B6%E8%A8%AD%E4%BC%BA%E6%9C%8D%E5%99%A8)。
 
-```
+>>```
 git init --bare project.git
 ```
 
@@ -27,7 +32,7 @@ git add .
 git commit -a -m "....."   /*不進入vim的寫法
 ```
 
->這是[sdlong對git commit的看法](http://sdlong.logdown.com/posts/736307)，我會在[臨摹他人的帖子如何做筆記](./臨摹他人的帖子如何做筆記.md)這篇文章中解釋，實作sdlong的學習法後，為何我不再使用「每一個小步驟都`git commit`送出一個patch」，他背後的理由與修正後的筆記方法。
+>這是[程式技術最有效的學習方法](http://sdlong.logdown.com/posts/736307)所採取的方法，我會在[臨摹他人的帖子如何做筆記](./臨摹他人的帖子如何做筆記.md)這篇文章中解釋，實作sdlong的學習法後，為何我不再使用「每一個小步驟都`git commit`送出一個patch」，他背後的理由與修正後的筆記方法。
 
 上面這行可以簡寫做
 ```
@@ -182,11 +187,29 @@ The authenticity of host 'github.com (207.97.227.239)' can't be established.
 
 ![2](./images/2.png)
 
+ref
+- [新增專案](https://zlargon.gitbooks.io/git-tutorial/content/remote/new_project.html)
+- [設定 Repo URL](https://zlargon.gitbooks.io/git-tutorial/content/remote/remote.html)
+
 ### 上傳到GitHub
 
-這段落改編自[設定 Repo URL](https://zlargon.gitbooks.io/git-tutorial/content/remote/remote.html)、[上傳分支](https://zlargon.gitbooks.io/git-tutorial/content/remote/push.html)，是我習慣的流程。
+在你要上傳的專案底下，下這道指令，設定你要傳到哪去
+```
+git remote add github [你的 Repository 的 URL]
+```
 
-一開始要先在你要上傳的專案底下，下這道指令
+然後下這道指令，上傳GitHub
 ```
-git remote add origin [你的 Repository 的 URL]
+git push github master
 ```
+
+ref
+- [設定 Repo URL](https://zlargon.gitbooks.io/git-tutorial/content/remote/remote.html)
+- 上傳分支](https://zlargon.gitbooks.io/git-tutorial/content/remote/push.html)
+
+## 推薦閱讀
+
+- [Git · GitBook](https://zlargon.gitbooks.io/git-tutorial/content/index.html)
+- [\[實戰心得\] Git 與 Github 版本控制](http://sdlong.logdown.com/posts/171365)
+- [\[心得分享\] 程式技術最有效的學習方法：認真仔細的整理 git commit](http://sdlong.logdown.com/posts/736307)
+- [\[心得分享\] 用 git rebase 來整理 commit 的技巧與概念](http://sdlong.logdown.com/posts/736902-sharing-organize-commit-in-git-rebase-to-techniques-and-concepts)
