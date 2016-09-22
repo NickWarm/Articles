@@ -184,9 +184,16 @@ The authenticity of host 'github.com (207.97.227.239)' can't be established.
 
 ### 上傳到GitHub
 
-這段落改編自[設定 Repo URL](https://zlargon.gitbooks.io/git-tutorial/content/remote/remote.html)、[上傳分支](https://zlargon.gitbooks.io/git-tutorial/content/remote/push.html)，是我習慣的流程。
+在你要上傳的專案底下，下這道指令，設定你要傳到哪去
+```
+git remote add github [你的 Repository 的 URL]
+```
 
-一開始要先在你要上傳的專案底下，下這道指令
+然後下這道指令，上傳GitHub
 ```
-git remote add origin [你的 Repository 的 URL]
+
 ```
+
+ref
+- [設定 Repo URL](https://zlargon.gitbooks.io/git-tutorial/content/remote/remote.html)
+- 上傳分支](https://zlargon.gitbooks.io/git-tutorial/content/remote/push.html)
