@@ -11,7 +11,7 @@
 
 有效率地透過git來練習寫code。
 
-這篇教學以臨摹TreeHouse的教材為例。[我推薦用TreeHouse入門Web](./為何我推薦TreeHouse而非CodeSchool.md)，TreeHouse都會提供課程的code，會有**start**與**final**，copy一份**start**後，改個專案名字。
+這篇教學以臨摹TreeHouse的教材為例。[我推薦用TreeHouse入門Web](./為何我推薦TreeHouse.md)，TreeHouse都會提供課程的code，會有**start**與**final**，copy一份**start**後，改個專案名字。
 
 把專案初始化
 ```
