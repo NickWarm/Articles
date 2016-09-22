@@ -27,7 +27,7 @@ git add .
 git commit -a -m "....."   /*不進入vim的寫法
 ```
 
->這是[sdlong對git commit的看法](http://sdlong.logdown.com/posts/736307)，我會在[臨摹他人的帖子如何做筆記](./臨摹他人的帖子如何做筆記.md)解釋，為何我自己實作sdlong的學習法後，為何不推薦每一個小步驟都`git commit`一次
+>這是[sdlong對git commit的看法](http://sdlong.logdown.com/posts/736307)，我會在[臨摹他人的帖子如何做筆記](./臨摹他人的帖子如何做筆記.md)這篇文章中解釋，實作sdlong的學習法後，為何我不再使用「每一個小步驟都`git commit`送出一個patch」，他背後的理由與修正後的筆記方法。
 
 上面這行可以簡寫做
 ```
@@ -183,6 +183,8 @@ The authenticity of host 'github.com (207.97.227.239)' can't be established.
 ![2](./images/2.png)
 
 ### 上傳到GitHub
+
+這段落改編自[設定 Repo URL](https://zlargon.gitbooks.io/git-tutorial/content/remote/remote.html)、[上傳分支](https://zlargon.gitbooks.io/git-tutorial/content/remote/push.html)，是我習慣的流程。
 
 一開始要先在你要上傳的專案底下，下這道指令
 ```
