@@ -206,18 +206,13 @@ git remote add github [你的 Repository 的 URL]
 
 然後下這道指令，上傳GitHub
 ```
-<<<<<<< HEAD
-
-=======
 git push github master
->>>>>>> ready
 ```
 
 ref
 - [設定 Repo URL](https://zlargon.gitbooks.io/git-tutorial/content/remote/remote.html)
 - 上傳分支](https://zlargon.gitbooks.io/git-tutorial/content/remote/push.html)
-<<<<<<< HEAD
-=======
+
 
 ## 推薦閱讀
 
