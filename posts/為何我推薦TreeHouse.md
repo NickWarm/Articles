@@ -1,10 +1,14 @@
 # 為何我推薦TreeHouse而非CodeSchool
 
-如果連基本的HTML都不懂，初學Web我個人推薦付費的[TreeHouse](https://teamtreehouse.com/tracks)課程，而非xdite喜歡的[CodeSchool](https://www.codeschool.com)。
+如果連基本的HTML、CSS都沒有碰過，初學Web我個人推薦付費的[TreeHouse](https://teamtreehouse.com/tracks)課程，而非xdite喜歡的[CodeSchool](https://www.codeschool.com)。
+
+### 為何不選CodeSchool
 
 為何不選CodeSchool是因為，CodeSchool大都是看完影片後，讓你直接在網站上實際打去體會知識。
 
 但這有個問題，你實際開發時都是在自己的電腦上開發，你會遇到Bug或是開發環境沒弄好的各種意外狀況，而這些無法跟你用CodeSchool學習的經驗作連結。
+
+### 為何推薦TreeHouse
 
 TreeHouse我最喜歡的優點在於，每門課都會提供課程的程式碼給你下載，分別是start與final。你可以把它下載到你的電腦[透過Git有效率地練習](./透過Git有效率地練功.md)，也方便[你做筆記](./臨摹他人的帖子如何做筆記.md)。
 
@@ -12,7 +16,7 @@ TreeHouse我最喜歡的優點在於，每門課都會提供課程的程式碼�
 
 個人建議初學者的學習順序
 
-1. TreeHouse
+TreeHouse
 
   1. [How to Make a Website Course](https://teamtreehouse.com/library/how-to-make-a-website)
 
@@ -22,10 +26,6 @@ TreeHouse我最喜歡的優點在於，每門課都會提供課程的程式碼�
 
   4. [HTML Tables Course](https://teamtreehouse.com/library/html-tables)
 
-2. [RailsFun系列影片](https://www.youtube.com/watch?v=6XUnYRB0Zpo&list=PLJ6M-k9dQEQ3VsyOZQwjZ5GdjaLJH3eB_)
-  + 最初看完Day1 ~ 7 + RDBMS即可
-  + 也可以參考我臨摹RailsFun的筆記
+有了這些基礎後，再去學rails學習曲線就不會那麼陡峭了。
 
-有了這些基本功後，就可以去辜狗他人的作品大量練習。
-
-而且你會希望熟練JavaScript與CSS，而這些TreeHouse都有優良的影片與範例給你學習。
+rails入門階段學完後，你會希望熟練JavaScript與CSS、Ruby，而這些TreeHouse都有優良的影片與範例給你學習。
