@@ -4,17 +4,25 @@
 
 ## 發表規範
 
-兩個branch
+#### 兩個branch
 - master
 - writing
 
-## 文章位置
+#### 文章位置
 - 寫作中的內容放在`articles`底下
 - 要發表的內容放在`articles\posts`
 
+#### 發表流程
+1. 要發表時使用`git checkout master` 切換到 master branch
+2. `git merge writing`
+3. 刪除不想發表的內容
+4. `git add .`
+5. `git commit -am "ready to push"`
+6. `git push github master`
+7. 切換回`writing` branch
 
-要發表時使用`git checkout master` 切換到 master branch，刪除不想發表的內容後切換到`master`並使用`git merge writing`
-
+# ToDo
+準備寫「xmind使用技巧」
 
 # Ready to update
 - 透過Git有效率地練功
