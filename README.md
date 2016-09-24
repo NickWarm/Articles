@@ -4,17 +4,29 @@
 
 ## 發表規範
 
-三個branch
+#### 兩個branch
 - master
 - writing
-- ready
 
-平時只有`master`與`writing`這兩個branch
+#### 文章位置
+- 寫作中的內容放在`articles`底下
+- 要發表的內容放在`articles\posts`
 
-要發表時使用`git checkout -b ready`生成新的`ready` branch，刪除不想發表的內容後切換到`master`並使用`git merge ready`
+#### 發表流程
+1. 要發表時使用`git checkout master` 切換到 master branch
+2. `git merge writing`
+3. 刪除不想發表的內容
+4. `git add .`
+5. `git commit -am "ready to push"`
+6. `git push github master`
+7. 切換回`writing` branch
 
-完成後再用`git branch -d ready`來刪除`ready` branch
+# ToDo
+準備寫「xmind使用技巧」
 
-注意，不要刪除資料夾，經測試用`rm -rf`刪除的資料夾，在所有branch都會被刪除。
+# Ready to update
+- 透過Git有效率地練功
+- 為何我推薦TreeHouse
 
-resumes相關的另外開一個新專案。
+# Ready to public
+- 臨摹程式如何做筆記
