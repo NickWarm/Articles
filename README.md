@@ -23,10 +23,3 @@
 
 # ToDo
 準備寫「xmind使用技巧」
-
-# Ready to update
-- 透過Git有效率地練功
-- 為何我推薦TreeHouse
-
-# Ready to public
-- 臨摹程式如何做筆記
