@@ -137,6 +137,33 @@ git merge (寫新功能的branchname)
 git branch -d (branchname)
 ```
 
+### Conflict
+
+merge後，有時候master branch與develop branch會有衝突，這時就要修掉conflict
+
+我習慣的開發環境Atom是使用[merge-conflicts](https://atom.io/packages/merge-conflicts)這套package。
+
+當你用`git commit`送出patch，發現log跟你說有衝突，於是回到Atom
+
+在Atom中下`cmd + shift + p` 下`merge c`然後選擇`Merge Conflicts: Detect`
+
+接著你會在底層看到
+
+![merge_conflict1](../images/merge_conflict1.jpeg)
+
+他會跟你說哪裡有衝突，點選任意一項後，就會跳到有衝突的地方
+
+![merge_conflict2](../images/merge_conflict2.jpeg)
+
+把你不想要的地方修掉後，剩下的那塊依舊會用顏色顯示，點選`use me`
+
+解完衝突後回去iTerm下`git add`
+
+更多`merge conflict`的知識請參閱[Cherry-Pick 版本衝突](https://zlargon.gitbooks.io/git-tutorial/content/patch/cherry_pick_conflict.html)
+
+ref
+- [merge-conflicts](https://atom.io/packages/merge-conflicts)
+
 ### 臨摹他人的GitHub projects
 我們可以從他人的專案去學習，首先到他人專案的GitHub，點選 `Clone or download`
 
