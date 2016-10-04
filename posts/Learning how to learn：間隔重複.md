@@ -2,7 +2,9 @@
 
 原本是臉書隨筆，覺得滿有價值的於是搬到部落格
 
-2016/8/11今天的內容是談working memory與long term memory。我們知道，學東西要透過反覆練習才能熟練。但是要怎麼把working memory轉換成long term memory，透過
+### 2016/8/11
+
+今天的內容是談working memory與long term memory。我們知道，學東西要透過反覆練習才能熟練。但是要怎麼把working memory轉換成long term memory，透過
 
 ### 間隔重複 spaced repetion
 
