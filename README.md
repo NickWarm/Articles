@@ -23,6 +23,11 @@
 
 # ToDo
 - 準備寫「xmind使用技巧」
+- 正在寫「學習方法論：網球的內心遊戲」
+  - 專注模式與發散模式要補充
+  - 有必要重看learning how to learn的影片
+  - 稍作介紹teller與doer也就是我1與我2
+- 準備發表「讀完網球的內心遊戲的初步感想」
 
 # Ready to update
 -
