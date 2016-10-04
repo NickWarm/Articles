@@ -28,4 +28,4 @@ TreeHouse
 
 有了這些基礎後，再去學rails學習曲線就不會那麼陡峭了。
 
-rails入門階段學完後，你會希望熟練JavaScript與CSS、Ruby，而這些TreeHouse都有優良的影片與範例給你學習。
+rails入門階段學完後，你會希望熟練MySQL、JavaScript、CSS、Ruby，而這些TreeHouse都有優良的影片與範例給你學習。
