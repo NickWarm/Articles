@@ -23,10 +23,3 @@
 
 # ToDo
 - 準備寫「xmind使用技巧」
-
-# Ready to update
--
--
-
-# Ready to public
--
