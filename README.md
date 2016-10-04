@@ -22,4 +22,11 @@
 7. 切換回`writing` branch
 
 # ToDo
-準備寫「xmind使用技巧」
+- 準備寫「xmind使用技巧」
+
+# Ready to update
+-
+-
+
+# Ready to public
+-
