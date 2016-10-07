@@ -83,6 +83,8 @@ Mind Mapping：透過心智圖梳理知識。
 
 > 詳情請參閱[Learning how to learn筆記：間隔重複](./Learning how to learn：間隔重複.md)。
 
+> 程式的練法，請參考[透過Git有效率地練功](./透過Git有效率地練功.md)
+
 ## 理論依據
 
 我個人很推崇Barbara Oakley教授在Coursera所開的[Learning how to learn](https://www.coursera.org/learn/learning-how-to-learn)這門課教導的學習方法論，在此謹約略概述
