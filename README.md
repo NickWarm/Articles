@@ -22,15 +22,9 @@
 7. 切換回`writing` branch
 
 # ToDo
-- 準備寫「xmind使用技巧」
-- 正在寫「學習方法論：網球的內心遊戲」
+
 
 # Ready to update
-- 「學習方法論：網球的內心遊戲」
-  - 有必要重看learning how to learn的影片
-  - 為何不要寫完整工整的筆記，拿自己學訊號與系統的經驗做說明。
+
 
 # Ready to public
-- 「讀完網球的內心遊戲的初步感想」
-- 「Learning how to learn筆記：間隔重複」
-- 「Learning how to learn 初學筆記」
