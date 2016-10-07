@@ -35,7 +35,7 @@
 
 ## 執行細節
 
-##### Step.1 建立世界觀
+### Step.1 建立世界觀
 1. 跳過理論的片段，**直接看實戰的部分**，例如：數學例題、程式demo範例
 2. 把影片聲音關掉，速度調成兩倍
 3. 快速瀏覽兩倍速的影片，不熟悉的部分重複刷個三四遍
@@ -51,7 +51,7 @@
 - [Inner game of tennis](https://www.amazon.com/Inner-Game-Tennis-Classic-Performance/dp/0679778314)
 - [Learning how to learn](https://www.coursera.org/learn/learning-how-to-learn)
 
-##### Step.2 理解背後原理
+### Step.2 理解背後原理
 反覆操作第一階段的步驟，完成大部份的例題，接著
 
 1. 影片調成正常速度，理解背後的理論與思考脈絡
@@ -71,13 +71,13 @@
 - [自由書寫術](http://www.books.com.tw/products/0010726388)
 - [給小寶貝 - 『自修』、『讀書』的力量](https://dotblogs.com.tw/sanctuary/2008/09/30/5540)
 
-##### Step.3 Mind Mapping
+### Step.3 Mind Mapping
 
 Mind Mapping：透過心智圖梳理知識。
 
 > 詳情請參閱[Learning how to learn筆記：心智圖](./Learning how to learn：心智圖.md)、[xmind使用技巧](./xmind使用技巧.md)這兩篇文章。
 
-##### Step.4 內化成自己的能力
+### Step.4 內化成自己的能力
 
 以前大學時，臨摹一個新學習的數學範例我也都會重複刷個好幾次，在此推薦更有效率的內化方法「間隔重複」：
 
