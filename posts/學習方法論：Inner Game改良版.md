@@ -75,7 +75,7 @@
 
 Mind Mapping：透過心智圖梳理知識。
 
-> 詳情請參閱[Learning how to learn筆記：心智圖](./Learning how to learn初學筆記.md)、[xmind使用技巧](./xmind使用技巧.md)這兩篇文章。
+> 詳情請參閱[Learning how to learn筆記：心智圖](./Learning how to learn：心智圖.md)、[xmind使用技巧](./xmind使用技巧.md)這兩篇文章。
 
 ##### Step.4 內化成自己的能力
 
