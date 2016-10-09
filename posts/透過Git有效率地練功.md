@@ -20,7 +20,7 @@ git init
 
 >如果要自己架Git Server跟別人協同開發，[JC大建議](http://tienshunlo-blog.logdown.com/posts/711614-novice-instruction-day2-hd)初始化寫  ( 新手不需要用這方法 )，詳情請見[Git - 架設伺服器](https://git-scm.com/book/zh-tw/v1/%E4%BC%BA%E6%9C%8D%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E6%9E%B6%E8%A8%AD%E4%BC%BA%E6%9C%8D%E5%99%A8)。
 
->>```
+```
 git init --bare project.git
 ```
 
