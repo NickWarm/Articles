@@ -270,7 +270,7 @@ ArgumentError: wrong number of arguments (2 for 1)
 => nil
 ```
 
-換句話說，**`lambda`對參數的確認較佳嚴謹**
+換句話說，**`lambda`對參數的確認較為嚴謹**
 
 ## `return`的處理不同
 
