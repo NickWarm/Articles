@@ -170,8 +170,8 @@ end
 ```Ruby
 # 原始寫法
 
-def myfun(&proc)
-  proc.call
+def myfun(&p)
+  p.call
 end
 
 # 等同於
