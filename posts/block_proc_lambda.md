@@ -31,7 +31,7 @@ pry(main)> multiply(2)
 
 # proc 與 block
 
-當傳參數已經無法滿足我了，我想要傳一段程式碼(`block`)到method裡去時，我要讓我的參數加上`&`
+當傳參數已經無法滿足我了，我想要傳一段程式碼(`block`)到method裡去時，要讓參數加上`&`
 
 ```Ruby
 def myfun(&p)
@@ -55,7 +55,6 @@ pry(main)> myfun { puts 2*2 }
 
 如果直接呼叫`myfun`後面沒給`block`就會噴錯
 
->Block是可以暫存一段ruby code的地方，如果只有一行可以用`{...}`，若是很多行可以用`do...end`
 
 ```
 pry(main)> myfun()
@@ -94,7 +93,7 @@ myproc = proc { puts "use myproc" }
 
 執行程式時
 
-```Ruby
+```
 pry(main)> myfun(&myproc)
 => use myproc
 
