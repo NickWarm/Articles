@@ -143,9 +143,11 @@ pry(main)> myfun2 &myproc
 => ArgumentError: wrong number of arguments (0 for 1)
 ```
 
->一個重要的小結論
->- method的參數`p`若加上`&`，則 **`&p`就是`block`**。
->- method的參數`p`若沒有`&`，則 **`p`就是`proc`**。
+>一個重要的小結論：
+>
+>當method的定義裡面有用到`call`時，method的參數(變數)`p`
+>- 若加上`&`，則 **`&p`就是要傳`block`** 進到mehtod裡去，當`p.call`調用時，就會執行傳進來的`block`。
+>- 若沒有`&`，則 **`p`就是要傳`proc`** 進到mehtod裡去，當`p.call`調用時，就會執行傳進來的`proc`。
 
 # yield
 
