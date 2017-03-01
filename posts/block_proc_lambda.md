@@ -31,7 +31,7 @@ pry(main)> multiply(2)
 
 # proc 與 block
 
-當傳參數已經無法滿足我了，我想要傳一段程式碼(`block`)到method裡去時，要讓參數加上`&`
+當傳參數已經無法滿足我了，我想要讓method使用一段程式碼(`block`)時，**method的參數加上`&`**。
 
 ```Ruby
 def myfun(&p)
@@ -41,9 +41,18 @@ end
 
 >`block`是可以暫存一段ruby code的地方，如果只有一行可以用`{...}`，若是很多行可以用`do...end`
 >
->`&`就像是一個聲明，說得是我要傳一段`block`進來，然後我用`call`調用傳進來的`block`
+>`block`不是物件(object)，沒有辦法單獨的存在，也沒辦法把它指定給某個變數
+>
+>`block`也不是參數(variable)，`block`通常得像寄生蟲一樣依附或寄生在其它的方法或物件（或是使用某些類別把它物件化）
+>
+>ref
+>- [第 07 章 - 方法與程式碼區塊(block) - iT 邦幫忙](http://railsbook.tw/chapters/07-ruby-basic-3.html)
 
-如此一來，我就能在我的method後面，**接一個`block`**，把這個`block`當成一個參數傳到method裡去
+`&`就像是一個聲明，說得是我要傳一段`block`進來，然後我用`call`調用傳進來的`block`
+
+如此一來，我就能在我的method後面，接一個`block`，**把這個`block`給物件化**。
+
+如此一來，method裡的`p`就是一個物件，可以調用`call`這方法，來取得`block`的內容
 
 ```
 pry(main)> myfun { puts "Hello world" }
@@ -53,7 +62,7 @@ pry(main)> myfun { puts 2*2 }
 => 4
 ```
 
-如果直接呼叫`myfun`後面沒給`block`就會噴錯
+當參數使用`&`，如果直接呼叫`myfun`後面沒給`block`就會噴錯，因為`myfun`裡的`call`是一個method，method的存在是因為有著一個object來呼叫它。
 
 
 ```
@@ -73,12 +82,9 @@ pry(main)> myfun() {}
 
 如果有 **想要重複使用的程式碼，就用`Proc`包起來**，`Proc`也就是Procedure的意思。
 
-```Ruby
-# method
-def myfun(&p)
-  p.call
-end
+使用`Proc`就可以把`block`物件化
 
+```Ruby
 # 原本用block的寫法
 myfun { puts "use myproc" }
 
@@ -87,6 +93,34 @@ myfun { puts "use myproc" }
 myproc = Proc.new { puts "use myproc" }
 
 # 等同於
+
+myproc = proc { puts "use myproc" }
+```
+
+**`Proc`的default method就是`call`**，讓我們能呼叫要重複使用的程式碼
+- [Class: Proc (Ruby 2.4.0) - call](https://ruby-doc.org/core-2.4.0/Proc.html#method-i-call)
+
+```
+
+[40] pry(main)> myproc2 = proc { |x| x *2 }
+=> #<Proc:0x007fde7c666d60@(pry):66>
+
+[41] pry(main)> myproc2.call(2)
+=> 4
+
+[42] pry(main)> myproc2.call(3)
+=> 6
+```
+
+## 惱人的`&`
+
+當method的參數使用`&`，後面又接`Proc`時
+
+```Ruby
+# method
+def myfun(&p)
+  p.call
+end
 
 myproc = proc { puts "use myproc" }
 ```
@@ -102,29 +136,14 @@ pry(main)> myfun(&myproc)
 pry(main)> myfun &myproc
 => use myproc
 
-# 由於我們在myfun這method有用 & 來定義進來的參數，所以如果用Proc生成的object沒用 & ，則會噴錯
+# 由於我們在myfun這method有用 & 來定義進來的參數，所以myfun這method後面只能接block，
+# 如果 myfun 後面接 Proc 生成的 object，則會噴錯
 
 pry(main)> myfun myproc
 => ArgumentError: wrong number of arguments (1 for 0)
 ```
 
-**`Proc`的default method就是`call`**，讓我們能呼叫要重複使用的程式碼
-- [Class: Proc (Ruby 2.4.0) - call](https://ruby-doc.org/core-2.4.0/Proc.html#method-i-call)
 
-```
-[40] pry(main)> myproc2 = proc { |x| x *2 }
-=> #<Proc:0x007fde7c666d60@(pry):66>
-
-[41] pry(main)> myproc2.call(2)
-=> 4
-
-[42] pry(main)> myproc2.call(3)
-=> 6
-```
-
-
-
-## 惱人的`&`
 
 如果說，我在method的參數，不用`&`則會怎樣呢？
 
@@ -135,19 +154,21 @@ end
 
 myproc = Proc.new { puts "use myproc" }
 
-pry(main)> myfun2 myproc
+pry(main)> myfun2 myproc   # 這就是一般的 Proc 調用 call 方法
 => use myproc
 
 
-pry(main)> myfun2 &myproc
+pry(main)> myfun2 &myproc  # 使用 & 就是在聲明使用 block，若是使用block，則 myfun2的參數就該定義 &，由於myfun2的參數沒定義 & 所以噴錯
 => ArgumentError: wrong number of arguments (0 for 1)
 ```
+
+如果自定義的method，**它的參數不用`&`，而method裡又使用了`call`**。則必定要傳`Proc`進去。因為`call`是`Proc`物件的**default method**。
 
 >一個重要的小結論：
 >
 >當method的定義裡面有用到`call`時，method的參數(變數)`p`
->- 若加上`&`，則 **`&p`就是要傳`block`** 進到mehtod裡去，當`p.call`調用時，就會執行傳進來的`block`。
->- 若沒有`&`，則 **`p`就是要傳`proc`** 進到mehtod裡去，當`p.call`調用時，就會執行傳進來的`proc`。
+>- 加上`&`：`&p`代表method後面要接則`block`，透過`&p`使`block`物件化，當`p.call`調用時，就會執行`block`。
+>- 沒有`&`：`p`代表要傳`proc`這個object進到method裡去，當`p.call`調用時，就會執行傳進來的`proc`。
 
 # yield
 
@@ -202,7 +223,7 @@ pry(main)>myfun3 myproc
 
 # lambda
 
-要傳一段程式碼到method裡去，除了可以直接用`block`或`Proc`外，也能用`lambda`。
+要讓method使用一段程式碼，除了用`block`或`Proc`之外，也能用`lambda`。
 
 `lambda`的寫法很簡單，例如：
 
