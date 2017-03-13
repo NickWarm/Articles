@@ -302,11 +302,11 @@ rack_app = Middleware1.new(Middleware2.new(Middleware3.new(App)))
 
 ![](../images/middleware_stack.png)
 
-一層又一層的Middleware攔截了我們的request並對他做處理與修改，讓request到達我們的Ruby web app之前，「就先取得我們需要的資訊」
+一層又一層的Middleware攔截了我們的request並對他做處理與修改，如此一來Ruby web app所收到的request，就只會有這app所需要的資訊，而不會有其他多餘的資訊。
 
 >這樣的模式稱之為pipeline design pattern，推薦閱讀下面兩篇，尤其是維基百科的那張圖，看了會很有感覺
->- [comment: ruby on rails - What is Rack middleware? - Stack Overflow](http://stackoverflow.com/a/2257031)
 >- [指令管線化(Instruction pipeline) - 維基百科](https://zh.wikipedia.org/wiki/指令管線化)
+>- [comment: ruby on rails - What is Rack middleware? - Stack Overflow](http://stackoverflow.com/a/2257031)
 >
 >Rack middleware is more than "a way to filter a request and response" - it's an implementation of the pipeline design pattern for web servers using Rack.
 >
