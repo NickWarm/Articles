@@ -298,7 +298,7 @@ rack_app = Middleware1.new(Middleware2.new(Middleware3.new(App)))
 
 我們可以看到user送出的request先通過rack server然後才送到Ruby web app。
 
-也就是說，user送出的request先經過rack app的處理後，才送進我們的ruby web app，透過下面這張圖，能直觀地rack app做了什麼事
+也就是說，user送出的request先經過rack app的處理後，才送進我們的ruby web app，透過下面這張圖，能直觀地了解rack app做了什麼事
 
 ![](../images/middleware_stack.png)
 
