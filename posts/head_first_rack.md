@@ -9,7 +9,7 @@ rack是一個協定(protocol)，是一個接口(interface)，來傳遞 HTTP requ
 
 現在我們先來寫個簡單的rack app，如果你的還沒裝rack，可以下指令`gem install rack`來安裝。
 
-```
+```Ruby
 # first_rack_app.rb
 
 require "rack"
@@ -31,7 +31,7 @@ Rack::Handler::WEBrick.run(FirstRackApp.new, Port:3001)
 
 >由於Ruby可以省略`return`以及`()`的特性，所以這段code可以更簡潔寫成
 
-```
+```Ruby
 # first_rack_app.rb
 
 require "rack"
@@ -62,7 +62,7 @@ Rack::Handler::WEBrick.run FirstRackApp.new, Port:3001
 
 於是，你可以在一些rack文章上面看到更簡潔的寫法
 
-```
+```Ruby
 # first_rack_app.rb
 
 require "rack"
@@ -88,7 +88,7 @@ Rack::Handler::WEBrick.run FirstRackApp.new, Port:3001
 
 我們來改一下code，看看這個`env`是什麼吧
 
-```
+```Ruby
 # first_rack_app.rb
 
 require "rack"
@@ -143,7 +143,7 @@ $ curl http://localhost:3001/
 
 在其他Rack的文章你可能會常看到，rack app接一個proc或lambda，像是：
 
-```
+```Ruby
 app = proc do |env|
   ['200', {'Content-Type' => 'text/html'}, ['Hello, Rack!']]
 end
@@ -151,7 +151,7 @@ end
 
 或
 
-```
+```Ruby
 application = lambda do |env|
   [200, { "Content-Type" => "text/html" }, ["Yay, your first web application! <3"]]
 end
@@ -169,7 +169,7 @@ Rack app裡頭只有一個`call` method，`env`是一大串hash，當我們需�
 
 在此，以`env`中的`"REQUEST_METHOD"`與`"PATH_INFO"`為例，我現在定義一個Rack app
 
-```
+```Ruby
 # some_rack_app.rb
 
 class SomeRackApp
@@ -220,6 +220,8 @@ WEBrick是ruby內建的HTTP server，其他還有些常見的還有：Puma、Uni
 ```
 require "rack/handler/puma"
 
+...
+
 Rack::Handler::Puma.run FirstRackApp.new, Port:3001
 ```
 
@@ -229,7 +231,7 @@ Rack::Handler::Puma.run FirstRackApp.new, Port:3001
 
 若想要用更簡潔地寫法啟動rack app，則我們可以透過`Rack::Builder`。首先新增一個`config.ru`
 
-```
+```Ruby
 # config.ru
 
 class FirstRackApp
@@ -267,7 +269,7 @@ Middleware本身就是一個rack app。
 
 在`config.ru`裡可以用`use`調用先前編寫的一支支Middlewares，例如：
 
-```
+```Ruby
 # config.ru
 
 require './app.rb'
@@ -320,7 +322,7 @@ rack_app = Middleware1.new(Middleware2.new(Middleware3.new(App)))
 
 在這邊給一個`map`很具體的例子
 
-```
+```Ruby
 # config.ru
 
 require './main_rack_app.rb'
@@ -354,7 +356,7 @@ rack也有提供不少[包好的middleware](https://github.com/rack/rack/wiki/Li
 
 原本我們知道的`config.ru`大概會這樣寫
 
-```
+```Ruby
 # 原始config.ru
 
 class MyApp
@@ -368,7 +370,7 @@ run FirstRackApp.new
 
 現在我把rack app的部分獨立成`my_app.rb`
 
-```
+```Ruby
 # my_app.rb
 
 class MyApp
@@ -380,7 +382,7 @@ end
 
 這個時候，`config.ru`應該改寫成
 
-```
+```Ruby
 # config.ru
 
 require "./my_app.rb"
@@ -394,7 +396,7 @@ run app
 
 Middleware會用class包起來，先定義`initialize` method，再定義`call` method。
 
-```
+```Ruby
 # my_app_middleware.rb
 
 class MyAppMiddleware
@@ -420,7 +422,7 @@ end
 
 我回到`config.ru`來使用我剛剛寫好的middleware
 
-```
+```Ruby
 require "./my_app.rb"
 require "./my_app_middleware.rb"
 
@@ -437,7 +439,7 @@ run app
 
 現在我創造另一個middleware `hello_nick_middleware.rb`
 
-```
+```Ruby
 # hello_nick_middleware.rb
 
 class HelloNickMiddleware
@@ -455,7 +457,7 @@ end
 
 然後再修改一下`config.ru`
 
-```
+```Ruby
 # config.ru
 
 require "./my_app.rb"
@@ -482,7 +484,7 @@ end
 
 另外要注意一下，`config.ru`的top-level context只能有一個`run`，像是
 
-```
+```Ruby
 # config.ru
 
 ... #上面略
@@ -533,7 +535,7 @@ request.get?
 
 建一個`my_app1.rb`
 
-```
+```Ruby
 require 'rack'
 
 class MyApp1
@@ -583,7 +585,7 @@ This website path info is `/`
 
 建一個`my_app2.rb`
 
-```
+```Ruby
 require 'rack'
 
 class MyApp2
