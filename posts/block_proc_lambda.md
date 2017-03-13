@@ -15,6 +15,7 @@ end
 >ref：
 >- [我們寫的是 Function 還是 Method ?](http://kurtyu1209.blogspot.tw/2011/10/function-method.html)
 >- [oop - Difference between a method and a function - Stack Overflow](http://stackoverflow.com/questions/155609/difference-between-a-method-and-a-function)
+>- [Ruby裡的方法呼叫 - 高見龍](http://kaochenlong.com/2011/06/16/method-call-in-ruby/)
 
 有時，我們會想要給method傳參數進去
 
