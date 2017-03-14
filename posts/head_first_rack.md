@@ -80,9 +80,9 @@ Rack::Handler::WEBrick.run FirstRackApp.new, Port:3001
 >
 >- 一個`call` method
 >- 回傳一個array
->  - HTTP status
->  - header
->  - body
+>   - HTTP status
+>   - header
+>   - body
 
 # env是什麼？
 
