@@ -135,7 +135,11 @@ $ curl http://localhost:3001/
   "REQUEST_PATH"=>"/"}
 ```
 
-**`env`也就是environment是一個hash**。`env`被傳到`call` method裡去，於是Rack environment知道了這個request的很多資訊。我們可以看到，這個request是送出一個`GET`請求(`"REQUEST_METHOD"=>"GET"`)。，也可以看到我們在code裡定義的port 3001(`"SERVER_PORT"=>"3001"`)，欲了解這些Rack environment的定義可以看[Rack doc](http://www.rubydoc.info/github/rack/rack/master/file/SPEC#The_Environment)。
+**`env`也就是environment是一個hash**。
+
+`env`被傳到`call` method裡去，於是Rack environment知道了這個request的很多資訊。我們可以看到，這個request是送出一個`GET`請求(`"REQUEST_METHOD"=>"GET"`)，也可以看到我們在code裡定義的port 3001(`"SERVER_PORT"=>"3001"`)。
+
+欲了解這些Rack environment的定義可以看[Rack doc](http://www.rubydoc.info/github/rack/rack/master/file/SPEC#The_Environment)。
 
 # 為何rack app要定義`call` method
 
@@ -196,7 +200,9 @@ class SomeRackApp
 end
 ```
 
-這段code很簡單，當rack app調用`call`時，會把`env` hash得到的`REQUEST_METHOD`與`PATH_INFO`傳進我們自己定義的`handle_request` method裡面。接著用一個`if..else`做判斷，如果`REQUEST_METHOD`是GET，就調用自定義的`get` method來回傳一組array，如果`REQUEST_METHOD`不是GET，就用自定義的`method_not_allowed`，回傳另一組array
+這段code很簡單，當rack app調用`call`時，會把`env` hash得到的`REQUEST_METHOD`與`PATH_INFO`傳進我們自己定義的`handle_request` method裡面。
+
+接著用一個`if..else`做判斷，如果`REQUEST_METHOD`是GET，就調用自定義的`get` method來回傳一組array，如果`REQUEST_METHOD`不是GET，就用自定義的`method_not_allowed`，回傳另一組array
 
 如果我們把所有的邏輯都寫在`call`裡頭，時間久了後再去讀code就很難讀，**但我們把它語意化包成一個個method，就會非常直覺了**。
 
