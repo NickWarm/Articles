@@ -182,7 +182,7 @@ class SomeRackApp
   end
 
   private
-  def handle_request(method path)
+  def handle_request(method, path)
     if method == "GET"
       get(path)
     else
